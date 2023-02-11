@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>string conversion</title>
+        <h4>p5</h4>
+        <p>input string : <span id="string1"></span></p>
+        <p>modified string :<span id="string2"></span></p>
+    </head>
+    <body>
+        <script>
+            string1= "hello world"
+            str = string1.split('') 
+            for(i=0;i<str.length;i++)
+            {
+                switch(str[i]){
+                    case ' ':break;
+                    case 'z':str[i]='a';
+                    break;
+                    case 'Z':str[i]='A';
+                    break;
+                    default:
+                    str[i]=String.fromCharCode(1+str[i]. charCodeAt());
+                }
+                switch(str[i]){
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        
+                    str[i]=str[i].toUpperCase();
+                }
+            }
+            str= str.join('');
+            document.getElementById("string1").innerHTML=string1;
+            document.getElementById("string2").innerHTML=str;
+
+        </script>
+    </body>
+</html>

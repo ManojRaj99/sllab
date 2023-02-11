@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bakery</title>
+        <h2>Bakery</h2>
+   
+
+        <label for="bakery">Select item</label>
+        <select id="first">
+            <option value="ch">choco </option>
+            <option value="bi" >biskut</option>
+            </select>
+        <p>enter th quantity</p>
+        <input type="number" id="nu" >
+        <input type="button" onclick="cal()" value="Submit">
+        <p id="ans"></p>
+    </head>
+    <body>
+        <script>
+            function cal(){
+                a=document.getElementById("first").value;
+                b=document.getElementById("nu").value;
+                if(a=="ch"){
+                    c=20*b
+                }
+                else if(a=="bi"){
+                    c=30*b
+                }
+                document.getElementById("ans").innerHTML=c
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            string operation
+        </title>
+        <h3>string matching</h3>
+        <p>input string is : <span id="string1"></span></p>
+        <p>modified string is : <span id="string2"></span></p>
+    </head>
+    <body>
+        <script>
+                s="+a+w+";
+                function simple(){
+                    if(s[0]>='a'||s[s.length - 1]>='a')
+                    return false;
+                    else if(s=="")
+                    return false;
+                    else{
+                        for(i=1;i<s.length-1;i++){
+                            if(s[i]>='a'){
+                                if(s[i-1]!='+'||s[i+1]!='+')
+                                return false;
+                            }
+                        }
+                    }
+            
+            return true;
+                }
+                document.getElementById("string1").innerHTML=s;
+                document.getElementById("string2").innerHTML=simple();
+        </script>
+    </body>
+</html>
